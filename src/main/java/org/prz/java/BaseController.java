@@ -8,13 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class BaseController {
-	Integer counter = null;
+
+	Integer counter = 0;
 
 	private Integer userCounter(){
-		if (counter != null)
-			return ++counter;
-		else
-			return counter = 1;
+         return ++counter;
 	}
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
